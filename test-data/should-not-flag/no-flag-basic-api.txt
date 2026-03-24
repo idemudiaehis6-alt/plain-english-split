@@ -1,0 +1,1 @@
+GET /v1/status returns a JSON response body with server health information. Authentication uses a bearer token.

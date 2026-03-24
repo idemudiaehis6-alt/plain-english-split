@@ -1,0 +1,169 @@
+{
+  "passed": 12,
+  "total": 12,
+  "failed": 0,
+  "results": [
+    {
+      "file": "01_terms_of_service.txt",
+      "pass": true,
+      "expected_type": "Terms of Service",
+      "actual_type": "Terms of Service",
+      "confidence": "High",
+      "missing_flags": [],
+      "found_flags": [
+        "Unilateral rule changes",
+        "Class action waiver",
+        "Jury trial waiver",
+        "One-sided termination power",
+        "Mandatory arbitration",
+        "Automatic renewal",
+        "Refund limits",
+        "Extremely broad license grant",
+        "Sole discretion wording",
+        "Transferable content rights"
+      ]
+    },
+    {
+      "file": "02_privacy_policy.txt",
+      "pass": true,
+      "expected_type": "Privacy Policy",
+      "actual_type": "Privacy Policy",
+      "confidence": "High",
+      "missing_flags": [],
+      "found_flags": [
+        "Data sale or broad sharing",
+        "Long data retention",
+        "Cross-border data transfer",
+        "Outside companies may be involved",
+        "Advertising profiling"
+      ]
+    },
+    {
+      "file": "03_employment_agreement.txt",
+      "pass": true,
+      "expected_type": "Employment Agreement",
+      "actual_type": "Employment Agreement",
+      "confidence": "High",
+      "missing_flags": [],
+      "found_flags": [
+        "Non-solicitation restriction",
+        "At-will employment",
+        "Broad confidentiality duty",
+        "Sole discretion wording",
+        "Unvested equity loss"
+      ]
+    },
+    {
+      "file": "04_residential_lease.txt",
+      "pass": true,
+      "expected_type": "Rental / Lease Agreement",
+      "actual_type": "Rental / Lease Agreement",
+      "confidence": "High",
+      "missing_flags": [],
+      "found_flags": [
+        "Rent penalty",
+        "Broad compliance duty",
+        "Entry rights"
+      ]
+    },
+    {
+      "file": "05_loan_agreement.txt",
+      "pass": true,
+      "expected_type": "Financial Agreement",
+      "actual_type": "Financial Agreement",
+      "confidence": "High",
+      "missing_flags": [],
+      "found_flags": [
+        "Full balance can be demanded",
+        "Asset-backed risk",
+        "Variable rate risk"
+      ]
+    },
+    {
+      "file": "06_insurance_policy.txt",
+      "pass": true,
+      "expected_type": "Insurance Policy",
+      "actual_type": "Insurance Policy",
+      "confidence": "High",
+      "missing_flags": [],
+      "found_flags": [
+        "Pre-existing condition exclusion",
+        "Strict claim procedure",
+        "Coverage limits"
+      ]
+    },
+    {
+      "file": "07_medical_consent.txt",
+      "pass": true,
+      "expected_type": "Medical / Health Document",
+      "actual_type": "Medical / Health Document + Academic / Research Text",
+      "confidence": "High",
+      "missing_flags": [],
+      "found_flags": [
+        "No warranty promise"
+      ]
+    },
+    {
+      "file": "08_academic_abstract.txt",
+      "pass": true,
+      "expected_type": "Academic / Research Text",
+      "actual_type": "Academic / Research Text",
+      "confidence": "High",
+      "missing_flags": [],
+      "found_flags": [
+        "Research design limitation",
+        "Statistical significance claim",
+        "Self-reported evidence",
+        "Correlation is not causation",
+        "Limited sample size",
+        "Self-reported evidence"
+      ]
+    },
+    {
+      "file": "09_api_reference.txt",
+      "pass": true,
+      "expected_type": "Developer / API Documentation",
+      "actual_type": "Developer / API Documentation",
+      "confidence": "High",
+      "missing_flags": [],
+      "found_flags": []
+    },
+    {
+      "file": "10_academic_with_code.txt",
+      "pass": true,
+      "expected_type": "Code / Technical Snippet or Academic mixed",
+      "actual_type": "Code / Technical Snippet + Academic / Research Text",
+      "confidence": "High",
+      "missing_flags": [],
+      "found_flags": []
+    },
+    {
+      "file": "11_developer_terms_hybrid.txt",
+      "pass": true,
+      "expected_type": "Terms/API hybrid",
+      "actual_type": "Terms of Service + Developer / API Documentation",
+      "confidence": "High",
+      "missing_flags": [],
+      "found_flags": [
+        "Hybrid legal-technical terms",
+        "One-sided termination power",
+        "Mandatory arbitration",
+        "Refund limits",
+        "Sole discretion wording"
+      ]
+    },
+    {
+      "file": "12_government_notice.txt",
+      "pass": true,
+      "expected_type": "Government / Official Notice",
+      "actual_type": "Government / Official Notice",
+      "confidence": "High",
+      "missing_flags": [],
+      "found_flags": [
+        "Broad compliance duty",
+        "Notices may be digital only",
+        "Audit or inspection rights"
+      ]
+    }
+  ]
+}

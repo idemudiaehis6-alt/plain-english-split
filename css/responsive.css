@@ -1,0 +1,76 @@
+.sci-part{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;padding:0.2rem 0.55rem;border-radius:3px;background:rgba(232,197,71,0.1);border:1px solid rgba(232,197,71,0.2);color:var(--accent)}
+.sci-part-meaning{font-size:0.72rem;color:var(--muted);padding:0.25rem 0.55rem;background:rgba(255,255,255,0.04);border-radius:3px;border:1px solid var(--border)}
+</style>
+
+
+@media (max-width: 900px){
+  .compare-row{
+    grid-template-columns:1fr;
+  }
+}
+
+@media (max-width: 640px){
+  .output-tabs{
+    padding:12px 14px 0;
+    gap:8px;
+  }
+  .output-tab{
+    width:100%;
+    justify-content:center;
+    text-align:center;
+  }
+}
+
+@media (max-width: 860px){
+  .session-status{
+    display:none;
+  }
+}
+
+@media (max-width: 640px){
+  .history-panel{
+    width:100%;
+    padding:18px;
+  }
+  .history-item-top,
+  .history-item-bottom{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+}
+
+
+@media (max-width: 980px){
+  .flag-layout{
+    grid-template-columns:1fr;
+  }
+  .clause-nav{
+    border-right:none;
+    border-bottom:1px solid var(--line);
+  }
+}
+
+
+@media (max-width: 760px){
+  .reason-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+
+@media (max-width: 860px){
+  .theme-switcher{
+    order:3;
+  }
+}
+
+@media (max-width: 640px){
+  .theme-switcher{
+    width:100%;
+    justify-content:space-between;
+  }
+  .theme-btn{
+    flex:1;
+    text-align:center;
+  }
+}

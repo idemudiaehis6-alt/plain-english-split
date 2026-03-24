@@ -1,0 +1,5 @@
+API REFERENCE
+
+Authentication uses a bearer token. POST /v1/messages accepts a JSON request body and returns a JSON response body. Requests are subject to rate limits.
+
+A 429 status code indicates throttling. This endpoint is backward compatible with version 1 clients only.

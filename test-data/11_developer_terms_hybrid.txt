@@ -1,0 +1,5 @@
+DEVELOPER PLATFORM TERMS
+
+Use of the API is subject to these Terms. We may suspend access at any time in our sole discretion. Requests are subject to rate limits and authentication requirements.
+
+Any dispute shall be resolved by binding arbitration. Fees are nonrefundable. We may update this API documentation and related policies upon notice.

@@ -1,0 +1,93 @@
+{
+  "01_terms_of_service.txt": {
+    "expected_doc_type": "Terms of Service",
+    "expected_flags_contains": [
+      "Mandatory arbitration",
+      "Class action waiver",
+      "Automatic renewal",
+      "Refund limits",
+      "Extremely broad license grant"
+    ]
+  },
+  "02_privacy_policy.txt": {
+    "expected_doc_type": "Privacy Policy",
+    "expected_flags_contains": [
+      "Data sale or broad sharing",
+      "Long data retention",
+      "Advertising profiling",
+      "Cross-border data transfer"
+    ]
+  },
+  "03_employment_agreement.txt": {
+    "expected_doc_type": "Employment Agreement",
+    "expected_flags_contains": [
+      "At-will employment",
+      "Non-solicitation restriction",
+      "Broad confidentiality duty",
+      "Unvested equity loss"
+    ]
+  },
+  "04_residential_lease.txt": {
+    "expected_doc_type": "Rental / Lease Agreement",
+    "expected_flags_contains": [
+      "Rent penalty",
+      "Entry rights",
+      "Broad compliance duty"
+    ]
+  },
+  "05_loan_agreement.txt": {
+    "expected_doc_type": "Financial Agreement",
+    "expected_flags_contains": [
+      "Full balance can be demanded",
+      "Variable rate risk",
+      "Asset-backed risk"
+    ]
+  },
+  "06_insurance_policy.txt": {
+    "expected_doc_type": "Insurance Policy",
+    "expected_flags_contains": [
+      "Coverage limits",
+      "Pre-existing condition exclusion",
+      "Strict claim procedure"
+    ]
+  },
+  "07_medical_consent.txt": {
+    "expected_doc_type": "Medical / Health Document",
+    "expected_flags_contains": [
+      "No warranty promise"
+    ]
+  },
+  "08_academic_abstract.txt": {
+    "expected_doc_type": "Academic / Research Text",
+    "expected_flags_contains": [
+      "Statistical significance claim",
+      "Correlation is not causation",
+      "Limited sample size",
+      "Self-reported evidence"
+    ]
+  },
+  "09_api_reference.txt": {
+    "expected_doc_type": "Developer / API Documentation",
+    "expected_flags_contains": []
+  },
+  "10_academic_with_code.txt": {
+    "expected_doc_type": "Code / Technical Snippet or Academic mixed",
+    "expected_flags_contains": []
+  },
+  "11_developer_terms_hybrid.txt": {
+    "expected_doc_type": "Terms/API hybrid",
+    "expected_flags_contains": [
+      "One-sided termination power",
+      "Mandatory arbitration",
+      "Refund limits"
+    ]
+  },
+  "12_government_notice.txt": {
+    "expected_doc_type": "Government / Official Notice",
+    "expected_flags_contains": [
+      "Broad compliance duty",
+      "Audit or inspection rights",
+      "Notices may be digital only"
+    ]
+  }
+}

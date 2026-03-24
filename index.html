@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Plain English — Decode Any Document</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=IBM+Plex+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="./css/base.css"/>
+<link rel="stylesheet" href="./css/layout.css"/>
+<link rel="stylesheet" href="./css/components.css"/>
+<link rel="stylesheet" href="./css/responsive.css"/>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <div class="logo-word"><span class="logo-plain">Plain</span> <span class="logo-english">English</span></div>
+    <div class="logo-tag">Document Decoder</div>
+  </div>
+  <div class="header-right">
+    <div class="session-status" id="sessionStatus">Session memory off</div>
+    <button class="icon-btn session-btn" id="historyBtn" type="button">History</button>
+    <div class="complexity-badge" id="complexityBadge">Paste a document</div>
+  </div>
+</header>
+
+<div class="cat-bar">
+  <button class="cat-btn active" data-cat="auto">⚡ Auto-detect</button>
+  <button class="cat-btn" data-cat="legal">⚖️ Legal / Contract</button>
+  <button class="cat-btn" data-cat="privacy">🔒 Privacy Policy</button>
+  <button class="cat-btn" data-cat="medical">🏥 Medical / Health</button>
+  <button class="cat-btn" data-cat="financial">💰 Financial / Bank</button>
+  <button class="cat-btn" data-cat="insurance">🛡️ Insurance</button>
+  <button class="cat-btn" data-cat="rental">🏠 Rental / Lease</button>
+  <button class="cat-btn" data-cat="employment">💼 Employment</button>
+  <button class="cat-btn" data-cat="government">🏛️ Government</button>
+  <button class="cat-btn" data-cat="academic">📚 Academic</button>
+  <button class="cat-btn" data-cat="code">💻 Code</button>
+  <button class="cat-btn" data-cat="science">🔬 Scientific Names</button>
+</div>
+
+<main>
+  <!-- LEFT PANEL: INPUT -->
+  <div class="panel panel-left">
+    <div class="panel-header">
+      <span class="panel-title">Paste your document</span>
+      <div class="panel-actions">
+        <button class="icon-btn" id="clearBtn">Clear</button>
+        <button class="icon-btn" id="sampleBtn">Load sample</button>
+      </div>
+    </div>
+    <div class="input-area">
+      <textarea id="inputText" placeholder="Paste any document here — terms of service, contract, lease, medical form, bank policy, insurance agreement, government notice, academic paper...
+
+Works on anything. No AI, no internet required. Your text never leaves this page."></textarea>
+    </div>
+    <div class="char-count" id="charCount">0 characters · 0 words</div>
+    <div class="convert-bar">
+      <button class="convert-btn" id="convertBtn">Decode to Plain English →</button>
+      <label class="upload-btn" for="fileInput">📄 Upload .txt</label>
+      <input type="file" id="fileInput" accept=".txt,.md,.rtf"/>
+    </div>
+  </div>
+
+  
+  <!-- RIGHT PANEL: OUTPUT -->
+  <div class="panel panel-right">
+    <div class="panel-header">
+      <span class="panel-title">Plain English</span>
+      <div class="panel-actions">
+        <button class="icon-btn" id="copyBtn">Copy active tab</button>
+        <button class="icon-btn" id="copyFlagsBtn">Copy flags only</button>
+      </div>
+    </div>
+
+    <div class="output-tabs" id="outputTabs">
+      <button class="output-tab active" data-tab="summary">Summary</button>
+      <button class="output-tab" data-tab="plain">Plain English</button>
+      <button class="output-tab" data-tab="flags">Flagged Clauses</button>
+      <button class="output-tab" data-tab="terms">Replaced Terms</button>
+      <button class="output-tab" data-tab="compare">Original vs Simplified</button>
+    </div>
+
+    <div class="tab-panel active" id="tab-summary">
+      <div class="output-area" id="outputSummary">
+        <div class="empty-state">
+          <div class="empty-icon">📃</div>
+          <p>Your document summary will appear here.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-plain">
+      <div class="output-area" id="outputPlain">
+        <div class="empty-state">
+          <div class="empty-icon">✍️</div>
+          <p>Your plain English rewrite will appear here.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-flags">
+      <div class="output-area" id="outputFlags">
+        <div class="empty-state">
+          <div class="empty-icon">🚩</div>
+          <p>Risky clauses and watch-outs will appear here.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-terms">
+      <div class="output-area" id="outputTerms">
+        <div class="empty-state">
+          <div class="empty-icon">🧠</div>
+          <p>Decoded legal or technical terms will appear here.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-compare">
+      <div class="output-area" id="outputCompare">
+        <div class="empty-state">
+          <div class="empty-icon">↔️</div>
+          <p>Original and simplified text will appear side by side here.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <span class="legend-item"><span class="leg-dot leg-replaced"></span>Replaced jargon (hover to see original)</span>
+      <span class="legend-item"><span class="leg-dot leg-red"></span>Red flag clause</span>
+      <span class="legend-item"><span class="leg-dot leg-amber"></span>Watch out</span>
+    </div>
+  </div>
+
+</main>
+
+<div class="history-drawer" id="historyDrawer" aria-hidden="true">
+  <div class="history-backdrop" id="historyBackdrop"></div>
+  <aside class="history-panel">
+    <div class="history-panel-head">
+      <div>
+        <div class="history-kicker">Local Session</div>
+        <h2>Recent decodes</h2>
+      </div>
+      <button class="icon-btn" id="closeHistoryBtn" type="button">Close</button>
+    </div>
+    <p class="history-panel-copy">Saved only in this browser. Nothing leaves the page.</p>
+    <div class="history-actions">
+      <button class="icon-btn" id="saveNowBtn" type="button">Save current</button>
+      <button class="icon-btn" id="clearHistoryBtn" type="button">Clear history</button>
+    </div>
+    <div class="history-list" id="historyList">
+      <div class="history-empty">
+        <div class="empty-icon">🗂️</div>
+        <p>No saved sessions yet.</p>
+      </div>
+    </div>
+  </aside>
+</div>
+<script src="./js/data/jargon.js"></script>
+<script src="./js/data/redFlags.js"></script>
+<script src="./js/data/docTypes.js"></script>
+<script src="./js/engines/general.js"></script>
+<script src="./js/engines/code.js"></script>
+<script src="./js/engines/science.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/sampleContent.js"></script>
+</body>
+</html>

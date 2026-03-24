@@ -1,0 +1,5 @@
+ABSTRACT
+
+This study examined the relationship between chronic sleep irregularity and working-memory performance in university students. Methodology used a cross-sectional design and self-reported sleep logs.
+
+Results were statistically significant at p < .05, but the effect size was small. Correlation was observed, though causation could not be established. Limitations included small sample size and self-reported data.

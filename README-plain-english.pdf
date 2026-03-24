@@ -1,0 +1,94 @@
+# Plain English
+
+Paste any document. Get back a version you can actually understand.
+
+Terms of service, lease agreements, insurance policies, employment contracts, medical consent forms, government notices, privacy policies, academic papers, code — it reads the document, flags the dangerous clauses, replaces the jargon, and tells you what you agreed to.
+
+No AI. No internet. Your text never leaves the page.
+
+-----
+
+## What it does
+
+**For legal and policy documents:**
+
+- Detects document type automatically (or you pick manually)
+- Flags red-flag clauses: mandatory arbitration, class action waivers, auto-renewal traps, data selling, liability caps, broad license grants, and more
+- Replaces legal jargon with plain English inline — hover to see the original term
+- Scores reading complexity (Flesch-Kincaid)
+- Gives a plain verdict and risk level
+
+**For code:**
+
+- Explains HTML tags, CSS properties, JavaScript patterns, and Python patterns in plain language
+- Detects the language automatically
+
+**For scientific text:**
+
+- Decodes binomial species names, chemical formulas, and Latin/Greek medical terminology
+
+-----
+
+## Stack
+
+Vanilla HTML, CSS, JavaScript. No build step. No dependencies.
+
+-----
+
+## Run locally
+
+```bash
+npx serve .
+# open http://localhost:3000
+```
+
+Or just open `index.html` directly — works in most browsers. If you see a blank page, use `npx serve` instead (Chrome’s local file restrictions).
+
+Works fully offline. Google Fonts are the only external request.
+
+-----
+
+## Deploy
+
+Drop the folder on any static host. Nothing to configure.
+
+-----
+
+## Project structure
+
+```
+index.html
+css/
+  base.css            — resets, variables
+  layout.css          — page structure
+  components.css      — all component styles
+  responsive.css      — mobile breakpoints
+js/
+  data/
+    jargon.js         — 300+ term replacement dictionary
+    redFlags.js       — dangerous clause patterns
+    docTypes.js       — document type detection rules
+  engines/
+    general.js        — complexity scoring, flag detection, jargon replacement
+    code.js           — HTML/CSS/JS/Python explainer
+    science.js        — species names, chemical formulas, medical terms
+  app.js              — routing, UI, session history, draft persistence
+  sampleContent.js    — sample documents for each category
+test-data/            — 12 regression test files across all document types
+```
+
+-----
+
+## Regression tests
+
+12 test files covering every supported document type. Pass rate: 12/12.
+
+To run them:
+
+```bash
+node run-regression-tests.js
+```
+
+-----
+
+Built by I.G. Ehis

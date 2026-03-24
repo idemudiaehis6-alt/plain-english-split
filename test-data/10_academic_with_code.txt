@@ -1,0 +1,9 @@
+METHODS APPENDIX
+
+The experiment used a custom parser to normalize response data before analysis.
+
+function normalizeScores(values) {
+  return values.map(v => Number(v).toFixed(2));
+}
+
+The analysis then compared participant scores across conditions using a repeated-measures model.
